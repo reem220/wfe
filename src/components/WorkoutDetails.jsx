@@ -12,7 +12,7 @@ const WorkoutDetails = ({ workout,show,setShow }) => {
     if (!users) {
       return
     }
-   await ax.delete('http://localhost:4000/api/workouts/' + workout._id,{ headers: {
+   await ax.delete('https://wbe-drab.vercel.app/api/workouts/' + workout._id,{ headers: {
       'Authorization': `Bearer ${users.token}`
     }})
   

@@ -24,7 +24,7 @@ const WorkoutForm = ({show,setShow}) => {
       const workout = {title, load, reps}
       const users = JSON.parse(localStorage.getItem('user'))
   
-      const response = await ax.post('http://localhost:4000/api/workouts/' ,workout,{ headers: {
+      const response = await ax.post('https://wbe-drab.vercel.app/api/workouts/' ,workout,{ headers: {
         'Authorization': `Bearer ${users.token}`
       }})
      
